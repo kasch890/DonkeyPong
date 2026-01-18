@@ -1,6 +1,8 @@
 public class Main {
     public static void run(){
+
         System.out.println("~~~~ Instantiating game objects ~~~~");
+        GameMap gameMap = new GameMap();
         Mario mario = new Mario(10, 20);
         DonkeyKong donkeyKong = new DonkeyKong(10, 80);
         Pauline pauline = new Pauline(14, 80);
@@ -9,14 +11,15 @@ public class Main {
         System.out.println("~~~~ Start Game ~~~~");
         mario.speak();
         donkeyKong.speak();
-        pauline.speak();
         mario.moveRight();
         mario.moveRight();
         donkeyKong.throwBarrel(barrel);
         mario.jump();
         mario.pickUpHammer();
         mario.smash();
-
+        pauline.speak();
+        donkeyKong.throwBarrel(barrel);
+        mario.jump();
     }
     public static void main(String[] args) {
         run();

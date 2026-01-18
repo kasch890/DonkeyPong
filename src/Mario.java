@@ -1,4 +1,5 @@
-public class Mario extends Character implements UseHammer, playerMovement{
+public class Mario extends Character implements UseHammer, PlayerMovement{
+    //Mario is the player, he can move around and interact with the environment
     private boolean hasHammer;
     private int lives;
     public Mario(int x, int y){
@@ -24,21 +25,25 @@ public class Mario extends Character implements UseHammer, playerMovement{
 
     @Override
     public void moveLeft() {
+        setX(getX()-1);
         System.out.println(" ~ Mario moved left.");
     }
 
     @Override
     public void moveRight() {
+        setX(getX()+1);
         System.out.println(" ~ Mario moved right.");
     }
 
     @Override
     public void moveDown() {
+        setY(getY()-1);
         System.out.println(" ~ Mario moved down.");
     }
 
     @Override
     public void climbUp(){
+        setY(getY()+1);
         System.out.println(" ~ Mario climbed up.");
     }
     @Override
