@@ -1,4 +1,4 @@
-public interface Movement {
+public interface playerMovement {
     public void moveLeft();
     public void moveRight();
     public void moveDown();

@@ -1,7 +1,6 @@
 public class Pauline extends Character{
     public Pauline(int x, int y){
-        this.x =x;
-        this.y = y;
+        super(x,y);
         System.out.println("Pauline created at ("+x+","+y+")...");
     }
 

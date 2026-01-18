@@ -1,7 +1,6 @@
 public class DonkeyKong extends Character{
     public DonkeyKong(int x, int y){
-        this.x=x;
-        this.y=y;
+        super(x,y);
         System.out.println("Donkey Kong created at ("+x+","+y+")...");
     }
     @Override
