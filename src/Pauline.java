@@ -1,6 +1,8 @@
 public class Pauline extends Character{
-    public Pauline(){
-        System.out.println("Pauline created...");
+    public Pauline(int x, int y){
+        this.x =x;
+        this.y = y;
+        System.out.println("Pauline created at ("+x+","+y+")...");
     }
 
     @Override
