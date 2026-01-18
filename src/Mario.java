@@ -1,4 +1,5 @@
-public class Mario extends Character implements Hammer{
+public class Mario extends Character implements Hammer, Movement{
+    public int x, y;
     public Mario(){
         System.out.println("Mario created...");
     }
@@ -11,5 +12,33 @@ public class Mario extends Character implements Hammer{
     @Override
     public void smash() {
         System.out.println("Mario smashed with the hammer!");
+    }
+
+    @Override
+    public void moveLeft() {
+        this.x -=1;
+        System.out.println("Mario moved left.");
+    }
+
+    @Override
+    public void moveRight() {
+        this.x +=1;
+        System.out.println("Mario moved right.");
+    }
+
+    @Override
+    public void moveDown() {
+
+        System.out.println("Mario moved down.");
+    }
+
+    @Override
+    public void climbUp(){
+        this.y +=1;
+        System.out.println("Mario climbed up.");
+    }
+    @Override
+    public void jump() {
+        System.out.println("Mario jumped.");
     }
 }
