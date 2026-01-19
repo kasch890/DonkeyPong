@@ -12,9 +12,7 @@ public class Mario extends Character implements UseHammer, PlayerMovement{
     }
 
     @Override
-    public void speak() {
-        System.out.println("Mario: It's-a me, Mario!");
-    }
+    public void speak() {System.out.println("Mario: It's-a me, Mario!");}
 
     @Override
     public void smash() {
@@ -47,17 +45,11 @@ public class Mario extends Character implements UseHammer, PlayerMovement{
         System.out.println(" ~ Mario climbed up.");
     }
     @Override
-    public void jump() {
-        System.out.println(" ~ Mario jumped.");
-    }
-    public void pickUpHammer(){
-        hasHammer = true;
-    }
-    public void dropHammer(){
-        hasHammer = false;
-    }
-    public void loseLife() {
-        this.lives -= 1;
-    }
+    public void jump() {System.out.println(" ~ Mario jumped.");}
+    public void pickUpHammer(){hasHammer = true;}
+    public void dropHammer(){hasHammer = false;}
+    public void setLives(int lives) {this.lives = lives;}
+    public int getLives(){return this.lives;}
+    public void loseLife() {setLives(getLives()-1);}
 
 }

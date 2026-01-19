@@ -19,6 +19,7 @@ public class Main {
         mario.smash();
         pauline.speak();
         donkeyKong.throwBarrel(barrel);
+        mario.moveLeft();
         mario.jump();
     }
     public static void main(String[] args) {
